@@ -2,6 +2,8 @@
 require 'net/http'
 require 'open-uri'
 
+Dir.mkdir './downloads' unless File.exists? './downloads'
+
 for num in (1..170)
   name = "#{num}梯彙整服勤處所預擬分配表.xls"
   url = URI.escape("http://maseduc.moe.gov.tw/board/upload/#{name}")
